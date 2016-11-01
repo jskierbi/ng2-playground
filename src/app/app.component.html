@@ -1,12 +1,15 @@
-<h1>{{title}}</h1>
+<!-- Commented out for clarity -->
+
+<!--<h1>{{title}}</h1>-->
+<!--<input #heroInput-->
+       <!--(keyup.enter)="addHero(heroInput.value); heroInput.value=''"-->
+       <!--(blur)="addHero(heroInput.value); heroInput.value=''">-->
+<!--<button (click)="addHero(heroInput.value)">Add</button>-->
+<!--<button (click)="heroes=[]">Clear</button>-->
+<!--<ul>-->
+  <!--<li *ngFor="let hero of heroes">{{hero.name}}</li>-->
+<!--</ul>-->
+<!--<h2 *ngIf="heroes.length > 0">My favorite hero is: {{heroes[0].name}}</h2>-->
+<!--<click-me></click-me>-->
+
 <app-hero-form></app-hero-form>
-<input #heroInput
-       (keyup.enter)="addHero(heroInput.value); heroInput.value=''"
-       (blur)="addHero(heroInput.value); heroInput.value=''">
-<button (click)="addHero(heroInput.value)">Add</button>
-<button (click)="heroes=[]">Clear</button>
-<ul>
-  <li *ngFor="let hero of heroes">{{hero.name}}</li>
-</ul>
-<h2 *ngIf="heroes.length > 0">My favorite hero is: {{heroes[0].name}}</h2>
-<click-me></click-me>

@@ -4,7 +4,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {KeyupComponent} from "./keyup/keyup.component";
-import { HeroFormComponent } from './hero-form/hero-form.component';
+import {HeroFormComponent} from "./hero-form/hero-form.component";
 
 @NgModule({
     declarations: [
