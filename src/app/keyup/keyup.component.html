@@ -1,0 +1,6 @@
+<button (click)="onClickMe()">Click me!</button>
+<p *ngIf="clickMessage">{{clickMessage}}</p>
+<input (keyup)="onKey($event)">
+<p>{{values}}</p>
+<input #box (keyup)="0">
+<p>{{box.value}}</p>
