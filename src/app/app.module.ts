@@ -5,19 +5,26 @@ import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {KeyupComponent} from "./keyup/keyup.component";
 import {HeroFormComponent} from "./hero-form/hero-form.component";
+import {HeroEditorComponent} from "./hero-editor/hero-editor.component";
+import {HeroDetailComponent} from "./hero-detail/hero-detail.component";
+import {HeroService} from "./hero.service";
 
 @NgModule({
     declarations: [
         AppComponent,
         KeyupComponent,
-        HeroFormComponent
+        HeroFormComponent,
+        HeroEditorComponent,
+        HeroDetailComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule
     ],
-    providers: [],
+    providers: [
+        HeroService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
