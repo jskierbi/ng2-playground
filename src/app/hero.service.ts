@@ -24,4 +24,7 @@ export class HeroService {
         return HEROES;
     }
 
+    getHero(id: number): Hero {
+        return HEROES.filter(item => item.id == id)[0];
+    }
 }

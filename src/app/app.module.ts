@@ -8,6 +8,8 @@ import {HeroFormComponent} from "./hero-form/hero-form.component";
 import {HeroEditorComponent} from "./hero-editor/hero-editor.component";
 import {HeroDetailComponent} from "./hero-detail/hero-detail.component";
 import {HeroService} from "./hero.service";
+import {RouterModule} from "@angular/router";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 @NgModule({
     declarations: [
@@ -15,12 +17,32 @@ import {HeroService} from "./hero.service";
         KeyupComponent,
         HeroFormComponent,
         HeroEditorComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        DashboardComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        RouterModule.forRoot([
+            {
+                path: '',
+                redirectTo: '/dashboard',
+                pathMatch: 'full'
+            },
+            {
+                path: 'heroes',
+                component: HeroEditorComponent
+            },
+            {
+                path: 'dashboard',
+                component: DashboardComponent
+            },
+            {
+                path: 'detail/:id',
+                component: HeroDetailComponent
+            }
+        ])
     ],
     providers: [
         HeroService
